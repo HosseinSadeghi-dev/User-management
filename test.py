@@ -154,9 +154,24 @@ def delete_user():
     national_code = input("Please enter user's national_code: ")
     status, result = EmployeeDatabase.delete(national_code)
 
+    print(result + '\n')
+    input('press enter to proceed...')
+    functions.clear()
+    show_users()
+
 
 def delete_users():
-    pass
+    sure = input('are you sure ?! (y/n)')
+
+    if sure == 'Y' or sure == 'y':
+        status, result = EmployeeDatabase.delete()
+        print(result + '\n')
+        input('press enter to proceed...')
+        functions.clear()
+        show_users()
+    else:
+        functions.clear()
+        show_users()
 
 
 def update_user():

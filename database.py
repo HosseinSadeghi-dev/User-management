@@ -32,17 +32,17 @@ class EmployeeDatabase:
             return False, 'error: ' + str(e)
 
     @staticmethod
-    def delete(_id=None):
+    def delete(national_code=None):
         try:
             my_con = connect('database/database.db')
             my_cursor = my_con.cursor()
-            if _id:
-                my_cursor.execute(f"DELETE FROM employee WHERE id={_id}")
+            if national_code:
+                my_cursor.execute(f"DELETE FROM employee WHERE national_code={national_code}")
             else:
                 my_cursor.execute(f"DELETE FROM employee")
             my_con.commit()
             my_con.close()
-            return True
+            return True, 'deleted correctly'
         except Exception as e:
             return False, 'error: ' + str(e)
 
