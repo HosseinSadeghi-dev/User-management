@@ -2,4 +2,4 @@
 
 # Used Packages
 
-![numpy] (https://numpy.org/images/logos/numpy.svg)
+![numpy](https://numpy.org/images/logos/numpy.svg)
