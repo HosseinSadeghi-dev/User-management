@@ -11,22 +11,20 @@ for python >= 3.9 you should do following process:
 
 in primes.py you have to change the content because in python 3.9 GCD belongs to math instead of fractions
 
-C:\python39\Lib\site-packages\basehash\primes.py
+primes.py-dir : C:\python39\Lib\site-packages\basehash\primes.py
 
 
-OLD ---------
+---------- OLD ----------
+
+
 def gcd(*n):
     from fractions import gcd
-
     return abs(reduce(gcd, n))
 
 
+---------- NEW ----------
 
-
-
-NEW ---------
 
 def gcd(*n):
     from math import gcd
-
     return abs(reduce(gcd, n))
